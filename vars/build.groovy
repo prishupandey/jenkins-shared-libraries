@@ -1,6 +1,6 @@
-def call(app, tag) {
+def call(app, tag, user) {
   echo "This is building"
   sh "whoami"
-  sh "docker build -t ${app}:${tag} ."
+  sh "docker build -t ${user}/${app}:${tag} ."
   echo "Building is successful"
 }
